@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Regex Toolbox</title>
+</head>
+<body>
+    <h1>Regex Toolbox</h1>
+    <div class="container">
+        <div class="regex-container">
+            <h3>Regex Matcher</h3>
+            <form action="/results" method="post">
+                <label for="regex_pattern">Regular Expression:</label><br>
+                <input type="text" id="regex_pattern" name="regex_pattern" placeholder="Insert your regular expression here" autocomplete="off"><br>
+                <label for="test_string">Test String:</label><br>
+                <textarea id="test_string" name="test_string" placeholder="Insert your string here" cols="50"></textarea><br><br>
+                <button type="submit">Get Matches</button><br>
+                {% if regex_matches %}
+                    <p>Test String: {{ test_string }}</p>
+                    <p>Regular Expression Result:</p>
+                    <ul>
+                        {% for match in regex_matches %}
+                            <li>{{ match }}</li>
+                        {% endfor %}
+                    </ul>
+                {% elif no_matches %}
+                    <p>No matches found for '{{ regex_pattern }}' in the test string '{{ test_string }}'.</p>
+                {% endif %}
+            </form>
+        </div>
+
+        <div class="email-validation-container">
+            <h3>Email Validation</h3>
+            <form action="/validate_email" method="post">
+                <label for="email">Email:</label><br>
+                <input type="text" id="email" name="email" placeholder="Insert email address" autocomplete="off"><br><br>
+                <button type="submit">Validate Email</button>
+                {% if email_result %}
+                    <p>Email Validation Result:</p>
+                    <p>{{ email_result }}</p>
+                {% endif %}
+            </form>
+        </div>
+    </div>
+</body>
+</html>
