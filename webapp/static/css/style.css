@@ -1,0 +1,95 @@
+/* static/css/styles.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #f8f9fa;
+    color: #333;
+    
+    margin: 12;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+    font-family: 'Shadows Into Light', cursive;
+    
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    margin-top: 50px;
+}
+
+.regex-container, .email-validation-container {
+    flex: 1;
+    padding: 33px;
+    background-color: #fff;
+    border-radius: 14px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.regex-container {
+    border-right: 1px solid #ddd;
+    margin-right: 10px;
+}
+
+h3 {
+    margin-top: 0;
+    font-family: 'Shadows Into Light', cursive;
+    text-align: center;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px; /* Add padding to the textarea */
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.email-validation-container {
+    border: 1px solid #ddd;
+    margin-left: 10px;
+}
