@@ -48,6 +48,12 @@ Regex_Matching_Web_Application_Flask/   <br>
 
 Contributions are welcome! If you find any bugs or have suggestions for improvements, please open an issue or submit a pull request.
 
+### Note: 
+I have later deployed this app on AWS as I have not enrolled for paid services the website is not secured and everytime the instance stops and restarts the IP address changes for it.
+
 ## License
 
 This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
+
+
+
